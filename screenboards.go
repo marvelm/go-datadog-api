@@ -17,7 +17,7 @@ import (
 type Screenboard struct {
 	Id                *int               `json:"id,omitempty"`
 	Title             *string            `json:"board_title,omitempty"`
-	Height            *string            `json:"height,omitempty"`
+	Height            *int            `json:"height,omitempty"`
 	Width             *string            `json:"width,omitempty"`
 	Shared            *bool              `json:"shared,omitempty"`
 	Templated         *bool              `json:"templated,omitempty"`

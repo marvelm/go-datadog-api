@@ -10058,20 +10058,20 @@ func (r *reqGetTags) SetTags(v TagMap) {
 }
 
 // GetHeight returns the Height field if non-nil, zero value otherwise.
-func (s *Screenboard) GetHeight() string {
+func (s *Screenboard) GetHeight() *int {
 	if s == nil || s.Height == nil {
-		return ""
+		return nil
 	}
-	return *s.Height
+	return s.Height
 }
 
 // GetOkHeight returns a tuple with the Height field if it's non-nil, zero value otherwise
 // and a boolean to check if the value has been set.
-func (s *Screenboard) GetHeightOk() (string, bool) {
+func (s *Screenboard) GetHeightOk() (*int, bool) {
 	if s == nil || s.Height == nil {
-		return "", false
+		return nil, false
 	}
-	return *s.Height, true
+	return s.Height, true
 }
 
 // HasHeight returns a boolean if a field has been set.
@@ -10084,8 +10084,8 @@ func (s *Screenboard) HasHeight() bool {
 }
 
 // SetHeight allocates a new s.Height and returns the pointer to it.
-func (s *Screenboard) SetHeight(v string) {
-	s.Height = &v
+func (s *Screenboard) SetHeight(v int) {
+	s.Height = Int(v)
 }
 
 // GetId returns the Id field if non-nil, zero value otherwise.
